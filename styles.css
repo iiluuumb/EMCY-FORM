@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    background-image: url('background.avif');
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+.form-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    transform: translateY(-20px);
+    animation: slideUp 0.5s ease-in-out forwards;
+    overflow: visible;
+}
+.logo-container {
+    position: absolute;
+    top: 0px;  /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 10;
+}
+
+.logo {
+    width: 100px;  /* Adjust logo size */
+    height: auto;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    animation: fadeInHeader 1s ease-out;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #060235;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    color: #0f0e0e;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.group-image {
+    max-width: 109.3%;
+    height: auto;
+    animation: zoomIn 1s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    font-size: 1rem;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button.submit-button {
+    padding: 12px 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 200px;
+    align-self: center;
+}
+
+button.submit-button:hover {
+    background-color: #45a049;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  /* Space between checkboxes */
+}
+
+.checkbox-group label {
+    display: inline-flex;       /* Make label an inline-flex container */
+    align-items: center;        /* Vertically center the checkbox with the label */
+    font-size: 1rem;
+    color: #555;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;         /* Space between checkbox and label */
+    vertical-align: middle;     /* Ensure the checkbox aligns in the middle */
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .checkbox-group input {
+        margin-bottom: 10px;
+    }
+}
